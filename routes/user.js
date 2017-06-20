@@ -3,13 +3,15 @@ var router = express.Router();
 
 var db = require('../models/index');
 var User = require('../models/user');
+var UserInfo = require('../models/userinfo');
 
 //select
 router.post('/select/', function(req, res, next) {
 
   var Data = req.body;
+  User.hasOne(UserInfo);
 
-  User.findOne({ where: {FirstName: Data.FirstName} })
+  User.findOne({ where: {FirstName: Data.FirstName}, include: [UserInfo]})
   .then(result => {
       res.json(result);
   });
@@ -21,10 +23,20 @@ router.post('/insert/', function(req, res, next) {
 
   var Data = req.body;
 
+  User.hasOne(UserInfo);
+
   User.create ({
       FirstName: Data.FirstName,
-      LastName: Data.LastName
-  })
+      LastName: Data.LastName,
+      UserInfo: {
+        Address: Data.Address,
+        Movil: Data.Movil
+      }
+  },
+  {
+    include: [UserInfo]
+  }
+  )
   .then(() => {
       res.json({Result: 1});
   });
@@ -34,13 +46,17 @@ router.post('/insert/', function(req, res, next) {
 router.post('/update/', function(req, res, next) {
 
   var Data = req.body;
+  User.hasOne(UserInfo);
 
   User.findOne ({where: {
       FirstName: Data.FirstName,
-  }})
+  }, include: [UserInfo]})
   .then(R => {
       R.LastName = Data.LastName;
+      R.UserInfo.Address = Data.Address;
+      R.UserInfo.Movil = Data.Movil;
       R.save();
+      R.UserInfo.save();
       res.json({Result: 1});
   });
 });

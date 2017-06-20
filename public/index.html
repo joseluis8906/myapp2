@@ -15,12 +15,14 @@
                   var app = "user";
 
                   // escribir nombre del método sin slash
-                  var metodo = "delete";
+                  var metodo = "update";
 
                   // el objeto json que se envía
                   var objetoJson = {
                     FirstName: document.getElementById("FirstName").value,
                     LastName: document.getElementById("LastName").value,
+                    Address: document.getElementById("Address").value,
+                    Movil: document.getElementById("Movil").value
                     //aqui las propiedades que vayan a enviar en el objeto json
                   };
 
@@ -41,9 +43,11 @@
     </script>
 </head>
 <body>
-  <input id="FirstName" type="text"/>
-  <input id="LastName" type="text"/>
-  <input id="btnProbar" type="button" value="Probar"/>
+  <input id="FirstName" type="text" placeholder="FirstName" /><br/>
+  <input id="LastName" type="text" placeholder="FirstName" /><br/>
+  <input id="Address" type="text" placeholder="Address" /><br/>
+  <input id="Movil" type="text" placeholder="Movil" /><br/>
+  <input id="btnProbar" type="button" value="Probar"/><br/>
 
   <div id="tablero"></div>
 </body>
