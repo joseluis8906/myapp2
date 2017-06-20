@@ -1,0 +1,8 @@
+CREATE SCHEMA IF NOT EXISTS "Auth";
+
+CREATE TABLE IF NOT EXISTS "Auth"."User"
+(
+  "Id" BIGSERIAL PRIMARY KEY,
+  "FirstName" TEXT,
+  "LastName" TEXT
+);
