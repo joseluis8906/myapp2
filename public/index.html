@@ -15,7 +15,7 @@
                   var app = "user";
 
                   // escribir nombre del método sin slash
-                  var metodo = "update";
+                  var metodo = document.getElementById("Method").value;
 
                   // el objeto json que se envía
                   var objetoJson = {
@@ -43,6 +43,13 @@
     </script>
 </head>
 <body>
+  <label>Método</label> <select id="Method">
+    <option value=""></option>
+    <option value="select">Select</option>
+    <option value="insert">Insert</option>
+    <option value="update">Update</option>
+    <option value="delete">Delete</option>
+  </select><br/>
   <input id="FirstName" type="text" placeholder="FirstName" /><br/>
   <input id="LastName" type="text" placeholder="FirstName" /><br/>
   <input id="Address" type="text" placeholder="Address" /><br/>
