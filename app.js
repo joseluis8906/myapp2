@@ -1,5 +1,4 @@
 var express = require('express');
-var stylus = require('stylus');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -10,7 +9,7 @@ var sassMiddleware = require('node-sass-middleware');
 var db = require('./models/index');
 
 var index = require('./routes/index');
-var user = require('./routes/user');
+var giscuvi = require('./routes/giscuvi');
 
 var app = express();
 
@@ -36,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
-app.use('/user', user);
+app.use('/giscuvi', giscuvi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

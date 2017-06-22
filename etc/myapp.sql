@@ -11,5 +11,13 @@ CREATE TABLE IF NOT EXISTS "Auth"."UserInfo"
 (
   "UserId" BIGINT PRIMARY KEY REFERENCES "Auth"."User" ("Id") ON UPDATE CASCADE ON DELETE CASCADE,
   "Address" TEXT,
-  "Movil" TEXT
+  "Movil" TEXT,
+  "Hb" DATE
+);
+
+CREATE TABLE IF NOT EXISTS "Auth"."UserComplementary"
+(
+  "UserId" BIGINT PRIMARY KEY REFERENCES "Auth"."User" ("Id") ON UPDATE CASCADE ON DELETE CASCADE,
+  "Rh" TEXT,
+  "Job" TEXT
 );

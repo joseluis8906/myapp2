@@ -5,16 +5,45 @@ block content
   p Welcome to #{title}
 
   //form
-  select(id='Method')
-    option(value='', class='placeholder') Método
-    option(value='select') Select
-    option(value='insert') Insert
-    option(value='update') Update
-    option(value='delete') Delete
-  input(type='text', id='FirstName', placeholder='First Name')
-  input(type='text', id='LastName', placeholder='Last Name')
-  input(type='text', id='Address', placeholder='Address')
-  input(type='text', id='Movil', placeholder='Movil')
+  select(id="Method", class="placeholder")
+    option(value="", class="placeholder") Método
+    option(value="select", style="color: black") Select
+    option(value="insert", style="color: black") Insert
+    option(value="update", style="color: black") Update
+    option(value="delete", style="color: black") Delete
+  input(type='text', id='Numero', placeholder='Numero (int)')
+  input(type='text', id='NumeroInterno', placeholder='Numero interno (int)')
+  input(type='text', id='Material', placeholder='Material (string)')
+  input(type='text', id='Capacidad', placeholder='Capacidad (double)')
+  input(type='text', id='ClaseProducto', placeholder='Clase producto (string)')
+  input(type='text', id='NormaTecnica', placeholder='Norma técnica (string)')
+  input(type='text', id='Propietario', placeholder='Propietario (string)')
+  input(type='text', id='Presion', placeholder='Presion (double)')
+  input(type='text', id='AlturaConValvula', placeholder='Altura con valvula (double)')
+  input(type='text', id='PesoConValvula', placeholder='Peso con valvula (double)')
+  select(id='Valvula', class="placeholder")
+    option(value="", class="placeholder") Valvula
+    option(value="si", style="color: black") Si
+    option(value="no", style="color: black") No
+  input(type='text', id='TipoValvula', placeholder='Tipo Valvula (string)')
+  input(type='text', id='AcabadoColor', placeholder='Acabado color (string)')
+  input(type='text', id='Proveedor', placeholder='Proveedor (string)')
+  input(type='text', id='FechaCompra', placeholder='Fecha de compra (date)')
+  select(id='Garantia', class="placeholder")
+    option(value="", class="placeholder") Garantía
+    option(value="si", style="color: black") Si
+    option(value="no", style="color: black") No
+  input(type='text', id='FechaFabricacion', placeholder='Fecha de fabricacion (date)')
+  select(id='PruebaHidrostatica', class="placeholder")
+    option(value="", class="placeholder") Prueba Hidrostática
+    option(value="si", style="color: black") Si
+    option(value="no", style="color: black") No
+  select(id='Alquilado', class="placeholder")
+    option(value="", class="placeholder") Alquilado
+    option(value="si", style="color: black") Si
+    option(value="no", style="color: black") No
+  input(type='text', id='FechaAlquiler', placeholder='Fecha de alquiler (date)')
+  input(type='text', id='Observaciones', placeholder='Observaciones (string)')
 
   a(class="button", id="btnProbar") Send
 

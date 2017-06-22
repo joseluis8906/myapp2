@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-/*const db = new Sequelize('myapp', 'myapp', 'myapp123456789',
+/*const db = new Sequelize('gis', 'unixjs', 'K3J9 8LMN 02F3 B3LW',
 {
     host: '127.0.0.1',
     dialect: 'postgres',
@@ -10,8 +10,7 @@ var Sequelize = require('sequelize');
     }
 })*/
 
-const db = new Sequelize('postgres://myapp:myapp123456789@127.0.0.1:5432/myapp');
-//const db= new Sequelize('postgres://unixjs:K3J9 8LMN 02F3 B3LW@127.0.0.1:5432/gis');
+const db = new Sequelize('postgres://unixjs:K3J9 8LMN 02F3 B3LW@127.0.0.1:5432/gis');
 
 db.authenticate()
 .then(() => {
