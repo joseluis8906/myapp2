@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS "Gis"."Envase"
     "Material" TEXT,
     "Capacidad" DECIMAL,
     "ClaseProducto" TEXT,
-    "NormaTecnica" TEXT
+    "NormaTecnica" TEXT,
+    "Propietario" TEXT
 );
 
 CREATE TABLE IF NOT EXISTS "Gis"."EnvaseComplementaryInfo"
